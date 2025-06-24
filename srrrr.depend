@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1750683785 source:c:\users\vaio\onedrive\documentos\function\srrrr\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
