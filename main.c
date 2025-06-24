@@ -21,7 +21,7 @@ void CadastrarProduto(char nome[MaxProdutos][Tamanho], int quantidade[], double 
     fgets(nome[indice], Tamanho, stdin);
     nome[indice][strcspn(nome[indice], "\n")] = '\0';
     printf("\n");
-    system("cls"); //Linux: system("clear");
+    system("cls||clear"); // Clears screen both on Windows and Unix systems
     }
 
 void visualizarProdutos(char nome[MaxProdutos][Tamanho], int quantidade[], double valor[], int indice)
@@ -58,6 +58,7 @@ int main()
 
         case 1:
         {
+            system("cls||clear"); // Clears screen both on Windows and Unix systems
             CadastrarProduto(nome, quantidade, valor, indice);
             indice++;
             break;
@@ -66,12 +67,12 @@ int main()
         {
             if(indice != 0)
             {
-                system("cls"); //Linux: system("clear");
+                system("cls||clear"); // Clears screen both on Windows and Unix systems
                 visualizarProdutos(nome, quantidade, valor, indice);
             }
             else
             {
-                system("cls"); //Linux: system("clear");
+                system("cls||clear"); // Clears screen both on Windows and Unix systems
                 printf("\nSem Produtos Cadastrados.\n");
             }
             printf("\n");
@@ -82,7 +83,7 @@ int main()
 
         default :
         {
-            system("cls"); //Linux: system("clear");
+            system("cls||clear"); // Clears screen both on Windows and Unix systems
             ErroDeEntrada();
         }
         }
@@ -101,7 +102,7 @@ int main()
             do{
                 AlterarProdutos(nome, quantidade, valor, MaxProdutos);
                 if(indice < 1 || indice > MaxProdutos)
-                ErroDeEntrada(nome, quantidade, valor, MaxProdutos);
+                ErroDeEntrada();
             }while(indice < 1 || indice > MaxProdutos);
 
             CadastrarProduto(nome, quantidade, valor, indice - 1);
