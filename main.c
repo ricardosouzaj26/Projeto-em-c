@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#define MaxProdutos 2
+#define MaxProdutos 10
 #define Tamanho 50
 
 void menu()
